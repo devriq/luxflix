@@ -76,7 +76,7 @@ var listaFilmes = [
       "https://m.media-amazon.com/images/M/MV5BMTcwMDYwNTQ4N15BMl5BanBnXkFtZTgwMzg3Nzk4OTE@._V1_.jpg"
   },
   {
-    nome: "The Shallows",
+    nome: "Águas Rasas",
     poster: "https://m.media-amazon.com/images/I/51bwDcggRML._AC_.jpg"
   },
   {
