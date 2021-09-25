@@ -46,7 +46,11 @@ img {
   right: 10px;
 }
 
-#listaFilmes img {
+#film {
+  display: flex;
+}
+
+#film #listaFilmes img {
   margin: 10px;
   max-height: 250px;
 }
