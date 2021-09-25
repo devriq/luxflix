@@ -1,0 +1,79 @@
+body {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c613b915-14df-499b-9167-261a938bddc2/d3eiflj-bb7d48c1-ea9c-467f-be9e-27d36f2705f3.jpg/v1/fill/w_855,h_662,q_75,strp/scream_4_by_paullus23_d3eiflj-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjYyIiwicGF0aCI6IlwvZlwvYzYxM2I5MTUtMTRkZi00OTliLTkxNjctMjYxYTkzOGJkZGMyXC9kM2VpZmxqLWJiN2Q0OGMxLWVhOWMtNDY3Zi1iZTllLTI3ZDM2ZjI3MDVmMy5qcGciLCJ3aWR0aCI6Ijw9ODU1In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.fUZWFaR8lSLczHwkPNZuuazonlPltcb1znM7VW5Awlw");
+  background-color: #0d0b0c;
+  background-size: 70vh;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+body > img {
+  margin: 0 10px;
+}
+
+img {
+  max-height: 250px;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.title {
+  color: #ffffff;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#listaFilmes img {
+  margin: 10px;
+  max-height: 250px;
+}
+
+.form-wrapper {
+  margin: 0 0 15px;
+}
+
+.form-wrapper input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 15px;
+}
+
+.form-wrapper button {
+  border: 0;
+  color: #ffffff;
+  background: #da1e26;
+  font-weight: bold;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-wrapper button:hover {
+  opacity: 0.8;
+}
