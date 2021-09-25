@@ -90,7 +90,7 @@ var listaFilmes = [
       "https://upload.wikimedia.org/wikipedia/pt/d/dc/Lights_Out_2016_poster.jpg"
   },
   {
-    nome: "Demônio de Neon",
+    nome: "Demônio Neon",
     poster:
       "https://i.pinimg.com/originals/fd/88/de/fd88de81243449b87761517da432d248.jpg"
   },
