@@ -1,8 +1,9 @@
 body {
   font-family: "Roboto Mono", monospace;
   text-align: center;
+  font-size: 0.6rem;
   background-color: #0d0b0c;
-  background-size: 70vh;
+  background-size: 100vh;
   background-position: left top;
   background-repeat: no-repeat;
 }
@@ -12,7 +13,13 @@ body > img {
 }
 
 img {
-  max-height: 250px;
+  max-width: 200px;
+  object-fit: fill;
+}
+
+#false {
+  filter: grayscale(100%);
+  opacity: 0.9;
 }
 
 .container {
@@ -50,11 +57,11 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  justify-contente: evenly-spaced;
 }
 
 #film #listaFilmes {
-  margin: 10px;
-  max-width: 100vw;
+  margin: 5px;
 }
 
 #film #listaFilmes img {
