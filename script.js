@@ -58,12 +58,6 @@ var listaFilmes = [
     status: true
   },
   {
-    nome: "Ouija",
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BMTQ1NzcwMTU5MF5BMl5BanBnXkFtZTgwOTE5MzEyMjE@._V1_FMjpg_UX1000_.jpg",
-    status: true
-  },
-  {
     nome: "Os 13 Pecados",
     poster:
       "https://callmemisterglass.files.wordpress.com/2014/04/13-sins-poster-high-resolution1.jpg",
