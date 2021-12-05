@@ -4,7 +4,7 @@ var listaFilmes = [
     nome: "A Hora da Escuridão",
     poster:
       "https://i.pinimg.com/originals/7c/bb/59/7cbb591016c59b47e486eae4b9e83b52.jpg",
-    status: true
+    status: false
   },
   {
     nome: "Pânico 4",
@@ -37,7 +37,7 @@ var listaFilmes = [
     nome: "Uma Noite de Crime",
     poster:
       "https://upload.wikimedia.org/wikipedia/en/9/94/The_Purge_film_poster.jpg",
-    status: true
+    status: false
   },
   {
     nome: "Tumba Aberta",
@@ -98,6 +98,12 @@ var listaFilmes = [
     status: true
   },
   {
+    nome: "The Final Girls",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjI4Nzk2NzAzOV5BMl5BanBnXkFtZTgwNjI1NzY4NjE@._V1_.jpg",
+    status: true
+  },
+  {
     nome: "Demônio de Neon",
     poster:
       "https://i.pinimg.com/originals/fd/88/de/fd88de81243449b87761517da432d248.jpg",
@@ -112,16 +118,36 @@ var listaFilmes = [
   {
     nome: "Dia de Trabalho Mortal",
     poster: "https://br.web.img3.acsta.net/pictures/17/01/06/12/20/534187.jpg",
-    status: true
+    status: false
   },
   {
     nome: "Corra",
     poster: "https://upload.wikimedia.org/wikipedia/pt/0/02/Get_Out_2017.png",
+    status: false
+  },
+  {
+    nome: "A Escuridão",
+    poster: "https://m.media-amazon.com/images/M/MV5BMjIxMTg2NjAyMV5BMl5BanBnXkFtZTgwNDE5ODIxODE@._V1_.jpg",
+    status: true
+  },
+  {
+    nome: "A Cura",
+    poster: "https://pad.mymovies.it/filmclub/2016/10/098/locandinapg1.jpg",
     status: true
   },
   {
     nome: "Cargo",
     poster: "https://br.web.img3.acsta.net/pictures/17/10/23/12/33/0246129.jpg",
+    status: true
+  },
+  {
+    nome: "Ao Cair da Noite",
+    poster: "https://diamondfilms.com/img/poster/5935a58d485ca1bc54ba38fcd.jpg",
+    status: true
+  },
+  {
+    nome: "Mother!",
+    poster: "https://trecobox.com.br/wp-content/uploads/2017/05/jlawmother.jpg",
     status: true
   },
   {
@@ -157,13 +183,13 @@ var listaFilmes = [
     nome: "Nós",
     poster:
       "https://upload.wikimedia.org/wikipedia/pt/4/43/Us_2019_-_P%C3%B4ster.jpg",
-    status: true
+    status: false
   },
   {
     nome: "Midsommar",
     poster:
       "https://metagalaxia.com.br/wp-content/uploads/2019/09/midsommar-o-mal-nao-espera-a-noite-resenha-poster.jpg",
-    status: true
+    status: false
   },
   {
     nome: "Casamento Sangrento",
@@ -198,7 +224,7 @@ var listaFilmes = [
     poster:
       "https://upload.wikimedia.org/wikipedia/pt/thumb/8/85/Malignant_2021.jpg/233px-Malignant_2021.jpg",
     status: false
-  }
+  },
 ];
 
 //Função para exibir os filmes
