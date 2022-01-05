@@ -26,7 +26,7 @@ var listaFilmes = [
     nome: "A Última Casa da Rua",
     poster:
       "https://m.media-amazon.com/images/M/MV5BMjIxNTUwNTU4N15BMl5BanBnXkFtZTcwNTE0MTI3Nw@@._V1_FMjpg_UX1000_.jpg",
-    status: true
+    status: false
   },
   {
     nome: "Você é o Próximo",
@@ -49,7 +49,7 @@ var listaFilmes = [
     nome: "Assim na Terra como no Inferno",
     poster:
       "https://upload.wikimedia.org/wikipedia/pt/3/3c/As_Above%2C_So_Below.png",
-    status: true
+    status: false
   },
   {
     nome: "Sobreviventes",
@@ -95,7 +95,7 @@ var listaFilmes = [
     nome: "The Final Girls",
     poster:
       "https://m.media-amazon.com/images/M/MV5BMjI4Nzk2NzAzOV5BMl5BanBnXkFtZTgwNjI1NzY4NjE@._V1_.jpg",
-    status: true
+    status: false
   },
   {
     nome: "Demônio de Neon",
@@ -137,11 +137,6 @@ var listaFilmes = [
   {
     nome: "Ao Cair da Noite",
     poster: "https://diamondfilms.com/img/poster/5935a58d485ca1bc54ba38fcd.jpg",
-    status: true
-  },
-  {
-    nome: "Mother!",
-    poster: "https://trecobox.com.br/wp-content/uploads/2017/05/jlawmother.jpg",
     status: true
   },
   {
