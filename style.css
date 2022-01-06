@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
   text-align: center;
   font-size: 0.6rem;
   background-color: #0d0b0c;
@@ -13,7 +13,7 @@ body > img {
 }
 
 img {
-  max-width: 200px;
+  max-width: 250px;
   object-fit: fill;
 }
 
