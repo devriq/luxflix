@@ -1,0 +1,11 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-toolbar {
+    padding: 1rem;
+}
+
+.t1 {
+    font-size: 1.5rem;
+}
