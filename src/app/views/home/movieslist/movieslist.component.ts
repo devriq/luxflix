@@ -19,7 +19,7 @@ export class MovieslistComponent implements OnInit {
     this.getMovie();
   }
 
-  getMovie(){
+  getMovie(): void{
     this.movieService.getMoviesList().subscribe((data)=>{
       data.results.map((item)=>{
         this.list.push(item);

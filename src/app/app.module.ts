@@ -13,12 +13,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     MovieslistComponent,
     HomeComponent
   ],
@@ -30,9 +29,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    FlexLayoutModule,
     MatTabsModule,
-    MatCardModule,
-    FlexLayoutModule
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

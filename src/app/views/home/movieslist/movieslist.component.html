@@ -1,14 +1,12 @@
 <mat-tab-group mat-align-tabs="center">
     <mat-tab label="First">
-        <div fxLayout="row" fxLayoutAlign="center">
-            <ng-container style="margin: .5%;" *ngFor="let item of list">
-                <mat-card class="mat-card-movie" ng-repeat="item in list" fxFlex="0 1 (33.3% - 11px)" fxFlex.1t-md="0 1 calc(50% - 11px)" fxFlex.1t-sm="100%">
-                    <img src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" />
-                    <h2>
-                        {{item.original_title}}
-                    </h2>
-
-                    <mat-card-content class="justify">
+        <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%">
+            <ng-container style="margin: .5%;" *ngFor="let item of list" fxFlexAlign="0 1 calc(33.3% - 11px)" fxFlexAlign.lt-md="0 1 calc(50% - 11px)" fxFlexAlign.lt-sm="100%">
+                <mat-card class="example-card">
+                    <mat-card-title>
+                        A
+                    </mat-card-title>
+                    <mat-card-content>
                         <p>
                             {{item.overview}}
                         </p>
@@ -20,5 +18,4 @@
 
     <mat-tab label="Second">Content 2</mat-tab>
     <mat-tab label="Third">Content 3</mat-tab>
-
 </mat-tab-group>
