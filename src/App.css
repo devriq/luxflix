@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,700;1,100;1,200;1,400;1,700&display=swap');
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #111;
+    color: whitesmoke;
+    font-family: "Outfit", sans-serif;
+}
+
+.page {
+    width: 100%;
+    margin: 0;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #010101;
+    width: 100vw;
+    height:15vh;
+}
+
+
+
+
+
+#logo {
+    height: 60%;
+    
+}
+
+nav ul {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 20%;
+    list-style: none;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+nav ul li {
+    font-size: 1.6rem;
+}
+
+nav ul li:hover {
+    color: greenyellow;
+    cursor: pointer;
+}
+
+section {
+    display: grid;
+    width: 100vw;
+    overflow-y :scroll;
+    place-items: center;
+}
+
+@media (min-width:46rem) {
+    nav {
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 0;
+    }
+    #logo {
+        height: 15vh;
+        object-fit: contain;
+        justify-self: center;
+    }
+    nav ul {
+        justify-self: center;
+        height: 10vh;
+    }
+    
+    section {
+        grid-template-columns: repeat(3,1fr);
+    }
+}

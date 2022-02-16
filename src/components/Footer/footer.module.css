@@ -1,0 +1,7 @@
+footer {
+    margin: 0;
+    height: 10vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}

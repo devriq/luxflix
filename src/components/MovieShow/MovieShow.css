@@ -1,0 +1,60 @@
+.movieShow {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    position: relative;
+    margin: 2rem;
+}
+
+
+.movieShow:hover {
+    cursor:pointer;
+    outline: 1px solid greenyellow;
+}
+
+.movieShow img {
+    height: 100%;
+    width: 35%;
+    opacity:1;
+}
+
+.movieShow:hover img{
+    transition: all ease-in 300ms;
+    filter: grayscale(0);
+}
+
+
+.Yes {
+    opacity: 0.35;
+    transition: all ease-in 300ms;
+    filter: grayscale(1);
+}
+
+.overviewInfo{
+    position: relative;
+    background-color: #111;
+    width:65%;
+    opacity:1;
+    display: grid;
+    place-items: center;
+}
+
+.movieShow h2 {
+    height: 15%;
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+    justify-self: center;
+
+}
+
+
+.overviewInfo p {
+    height: 85%;
+    padding: 2rem;
+    font-size: 1rem;
+    align-self: flex-start;
+    text-align: justify;
+    overflow: hidden;
+}
+
