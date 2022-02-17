@@ -3,5 +3,6 @@ export default interface Movie {
     overview: string;
     original_title: string;
     poster_path: string;
+    backdrop_path: string;
     release_date: string;
   }

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Listagem from "../Listagem";
-import logoURL from "../../assets/logo-luxplus.jpg"
-// import './navBar.module.css'
+import logoURL from "../../assets/luxflix-logo.png"
 
 function NavBar(props: { movieList: any[], movieStatus: any[] }): JSX.Element {
     const [listNumber, setListNumber] = useState<string>('3');
@@ -13,7 +12,8 @@ function NavBar(props: { movieList: any[], movieStatus: any[] }): JSX.Element {
     }
 
     return (
-        <><nav>
+        <>
+        <nav>
             <img id="logo" src={logoURL} alt="logIMGo" />
             <ul>
                 <li onClick={handleClick}>1960-1995</li>

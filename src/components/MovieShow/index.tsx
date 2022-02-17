@@ -4,6 +4,7 @@ import Movie from '../../Movie';
 
 export default function MovieShow(props: {movie: Movie; status:any[]}): JSX.Element {
 
+  console.log(props.movie)
 
   return (
     <div className="movieShow">

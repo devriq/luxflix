@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
-import Movie from "../../Movie"
 import MovieShow from "../MovieShow"
+import Movie from './../../Movie';
 
 function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; movieList: Movie[]; movieStatus: any[] }): JSX.Element {
-    const [activeMovieList, setActiveMovieList] = useState<any[]>([]);
+    const [activeMovieList, setActiveMovieList] = useState<Movie[]>([]);
 
     useEffect(function (): void {
         if (listNumber === '1960-1995') { 
@@ -25,13 +25,13 @@ function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; 
     }, [listNumber, movieList]);
 
     return (
-        <>
+        <div>  
             <section className="movie-list">
                 {activeMovieList.map((movie: Movie) => {
                     return <MovieShow key={movie.id} movie={movie} status={movieStatus} />
                 })}
             </section>
-        </>
+        </div>
     )
 }
 export default Listagem;

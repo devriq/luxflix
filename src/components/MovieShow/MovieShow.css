@@ -1,9 +1,11 @@
 .movieShow {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 80%;
     position: relative;
-    margin: 2rem;
+    margin: 1rem;
+    /* outline: 1px solid red; */
+    flex: 1;
 }
 
 
@@ -14,8 +16,9 @@
 
 .movieShow img {
     height: 100%;
-    width: 35%;
+    width: 40%;
     opacity:1;
+
 }
 
 .movieShow:hover img{
@@ -32,27 +35,35 @@
 
 .overviewInfo{
     position: relative;
-    background-color: #111;
-    width:65%;
+    background-color: #010101;
+    width:70%;
     opacity:1;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* outline: 1px solid red; */
+
 }
 
 .movieShow h2 {
-    height: 15%;
+    /* outline: 1px solid red; */
+    font-size: 1rem;
+    height: 30%;
     width: 100%;
-    margin-top: 2rem;
+    margin: 1rem;
+    padding: 0;
     text-align: center;
-    justify-self: center;
+    line-height: 4;
 
 }
 
 
 .overviewInfo p {
-    height: 85%;
+    /* outline: 1px solid red; */
+
+    height: 70%;
     padding: 2rem;
-    font-size: 1rem;
+    font-size: .8rem;
     align-self: flex-start;
     text-align: justify;
     overflow: hidden;
