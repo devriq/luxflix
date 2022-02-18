@@ -1,11 +1,10 @@
 .movieShow {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
+    
+    width: 30rem;
     position: relative;
     margin: 1rem;
     /* outline: 1px solid red; */
-    flex: 1;
+    
 }
 
 
@@ -16,7 +15,7 @@
 
 .movieShow img {
     height: 100%;
-    width: 40%;
+    width: 100%;
     opacity:1;
 
 }

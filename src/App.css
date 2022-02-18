@@ -65,10 +65,11 @@ nav ul li:hover {
 }
 
 section {
-    display: grid;
-    width: 100vw;
-    overflow-y :scroll;
-    place-items: center;
+    display: flex;
+    width: 9999px;
+    height: 70vh;
+    overflow-x: hidden;
+    flex-direction: row;
 }
 
 @media (min-width:46rem) {
