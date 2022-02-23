@@ -1,16 +1,20 @@
-import React from 'react'
-import './App.css'
+import './App.css';
+import useFetch from './useFetch';
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
-import GetMovie from './GetMovie';
+import Listagem from './components/Listagem';
 
 export default function App() {
   
-  let [movieList , movieStatus] = GetMovie();
+  const [movieList , movieStatus] = useFetch();
 
   return (
     <div className="page">
-      <NavBar movieList={movieList} movieStatus={movieStatus}/>
+      <NavBar/>
+      <Listagem listNumber='1960-1995' movieList={movieList} movieStatus={movieStatus}/>
+      <Listagem listNumber='1996-2010' movieList={movieList} movieStatus={movieStatus}/>
+      <Listagem listNumber='2011-2020' movieList={movieList} movieStatus={movieStatus}/>
+      <Listagem listNumber='2021-2022' movieList={movieList} movieStatus={movieStatus}/>
       <Footer />
     </div>
   )

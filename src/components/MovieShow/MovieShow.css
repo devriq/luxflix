@@ -1,70 +1,63 @@
 .movieShow {
-    
-    width: 30rem;
-    position: relative;
-    margin: 1rem;
-    /* outline: 1px solid red; */
-    
+  width: 15rem;
+  position: relative;
+  /* outline: 1px solid red; */
+  transform: scale(0.9);
 }
 
-
 .movieShow:hover {
-    cursor:pointer;
-    outline: 1px solid greenyellow;
+  cursor: pointer;
+  outline: 1px solid greenyellow;
+  transform: scale(1);
+  transition: all ease 0.5s;
 }
 
 .movieShow img {
-    height: 100%;
-    width: 100%;
-    opacity:1;
-
+  height: 100%;
+  width: 100%;
+  opacity: 1;
 }
 
-.movieShow:hover img{
-    transition: all ease-in 300ms;
-    filter: grayscale(0);
+.movieShow:hover img {
+  transition: all ease-in 300ms;
+  filter: grayscale(0);
 }
-
 
 .Yes {
-    opacity: 0.35;
-    transition: all ease-in 300ms;
-    filter: grayscale(1);
+  opacity: 0.35;
+  transition: all ease-in 300ms;
+  filter: grayscale(1);
 }
 
-.overviewInfo{
-    position: relative;
-    background-color: #010101;
-    width:70%;
-    opacity:1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* outline: 1px solid red; */
-
+.overviewInfo {
+  position: relative;
+  background-color: #010101;
+  width: 70%;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* outline: 1px solid red; */
 }
 
 .movieShow h2 {
-    /* outline: 1px solid red; */
-    font-size: 1rem;
-    height: 30%;
-    width: 100%;
-    margin: 1rem;
-    padding: 0;
-    text-align: center;
-    line-height: 4;
-
+  /* outline: 1px solid red; */
+  font-size: 1rem;
+  height: 30%;
+  width: 100%;
+  margin: 1rem;
+  padding: 0;
+  text-align: center;
+  line-height: 4;
 }
-
 
 .overviewInfo p {
-    /* outline: 1px solid red; */
+  /* outline: 1px solid red; */
 
-    height: 70%;
-    padding: 2rem;
-    font-size: .8rem;
-    align-self: flex-start;
-    text-align: justify;
-    overflow: hidden;
+  height: 70%;
+  padding: 2rem;
+  font-size: 0.8rem;
+  align-self: flex-start;
+  text-align: justify;
+  overflow: hidden;
 }
-

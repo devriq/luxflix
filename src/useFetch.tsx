@@ -1,6 +1,7 @@
 import Movie from "./Movie";
+import axios from "axios";
 
-function GetMovie (){
+function useFetch(){
 
     let movieStatus: any[] = [];
     let movieData: any[] = [];
@@ -10,18 +11,18 @@ function GetMovie (){
             for (let i = 0; i < 10; i++) {
                 let apiUrl = `https://api.themoviedb.org/4/list/8175818?page=${i + 1}&2&api_key=a79b231633cd9524b54133ecc5c8f1a5&language=pt-BR&sort_by=release_date.asc`;
 
-                await fetch(apiUrl)
-                    .then((res) => res.json())
-                    .then((data) => {
-                        if(i===0){movieStatus.push(data['comments']);}
-                        data['results'].forEach((item: Movie) => { movieData.push(item); });
+                await axios.get(apiUrl)
+                    .then((response) => {
+                        if(i===0){movieStatus.push(response.data['comments']);}
+                        response.data['results'].forEach((item: Movie) => { movieData.push(item); });
                     });
             }
         }
+        
       loadData();
     
 
     return [movieData, movieStatus]
 }
 
-export default GetMovie;
+export default useFetch;
