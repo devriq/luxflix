@@ -10,11 +10,7 @@ export default function App() {
 
   return (
     <div className="page">
-      <NavBar/>
-      <Listagem listNumber='1960-1995' movieList={movieList} movieStatus={movieStatus}/>
-      <Listagem listNumber='1996-2010' movieList={movieList} movieStatus={movieStatus}/>
-      <Listagem listNumber='2011-2020' movieList={movieList} movieStatus={movieStatus}/>
-      <Listagem listNumber='2021-2022' movieList={movieList} movieStatus={movieStatus}/>
+      <NavBar movieList={movieList} movieStatus={movieStatus}/>
       <Footer />
     </div>
   )

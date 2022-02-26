@@ -1,32 +1,14 @@
 import { useEffect, useState } from "react"
 import MovieShow from "../MovieShow"
 import Movie from './../../Movie';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 import './Listagem.css'
 
 function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; movieList: Movie[]; movieStatus: any[] }): JSX.Element {
     const [activeMovieList, setActiveMovieList] = useState<Movie[]>([]);
-    const [scrollX, setScrollX] = useState(0)
     
 
-    function handleLeftArrow(){
-        let x = scrollX + Math.round(window.innerWidth/2);
-        if(x>0){
-            x=0
-        }
-        console.log(scrollX)
-        setScrollX(x)
-    }
-
-    function handleRightArrow(){
-        let x = scrollX - Math.round(window.innerWidth/2);
-        let listW = activeMovieList.length *150;
-        if((window.innerWidth-listW)>x){
-            x=(window.innerWidth-listW)-20;
-         }
-        setScrollX(x)
-    }
+    
 
     useEffect(function (): void {
         if (listNumber === '1960-1995') { 
@@ -45,24 +27,16 @@ function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; 
             let result = movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) >= 2021)
             setActiveMovieList(result)
         }
-    }, []);
+    }, [listNumber]);
 
     return (
         <div>
-            <section className="movie-list" style={{
-                marginLeft:scrollX,
-                width:activeMovieList.length*150
-            }}>
+            <section className="movie-list" >
                 {activeMovieList.map((movie: Movie) => {
                     return <MovieShow key={movie.id} movie={movie} status={movieStatus} />
                 })}
-            <div className="movieShow--left" onClick={handleLeftArrow}>
-                <ArrowBackIosIcon fontSize="large" />  
-            </div>
-            <div className="movieShow--right"  onClick={handleRightArrow}>
-                <ArrowForwardIosIcon fontSize="large"/>  
+          
 
-            </div>
             </section>
         </div>
     )

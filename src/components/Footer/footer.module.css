@@ -1,5 +1,5 @@
 footer {
-  position: relative;
+  background-color: var(--cp-bg-darker);
   bottom: 0;
   height: 10vh;
   width: 100vw;

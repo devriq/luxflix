@@ -1,20 +1,18 @@
 .movieShow {
-  width: 15rem;
-  position: relative;
-  /* outline: 1px solid red; */
+  background-color: var(--cp-bg-darker);
   transform: scale(0.9);
+  width: 30rem;
+  display: flex;
+  outline: 1px solid var(--cp-accent-secondary);
 }
-
 .movieShow:hover {
   cursor: pointer;
-  outline: 1px solid greenyellow;
-  transform: scale(1);
+  transform: scale(0.9);
   transition: all ease 0.5s;
 }
-
 .movieShow img {
   height: 100%;
-  width: 100%;
+  width: 45%;
   opacity: 1;
 }
 
@@ -30,34 +28,34 @@
 }
 
 .overviewInfo {
-  position: relative;
-  background-color: #010101;
-  width: 70%;
+  width: 55%;
+  height: 100%;
   opacity: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* outline: 1px solid red; */
 }
 
 .movieShow h2 {
-  /* outline: 1px solid red; */
-  font-size: 1rem;
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 1rem;
   height: 30%;
-  width: 100%;
-  margin: 1rem;
-  padding: 0;
   text-align: center;
-  line-height: 4;
 }
 
 .overviewInfo p {
-  /* outline: 1px solid red; */
-
-  height: 70%;
-  padding: 2rem;
-  font-size: 0.8rem;
-  align-self: flex-start;
+  height: 60%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 0.7rem;
   text-align: justify;
   overflow: hidden;
+}
+
+.overviewInfo button {
+  height: 10%;
+  color: var(--cp-accent-secondary);
+  background-color: var(--cp-accent-primary);
+  border: none;
+  box-shadow: 1rem;
 }
