@@ -19,7 +19,7 @@ body {
   margin: 0 auto;
   padding: 0 auto;
   box-sizing: border-box;
-  background-color: #111;
+  background-color: var(--cp-bg-darker);
   font-family: "Outfit", sans-serif;
   color: var(--cp-accent-secondary);
 }

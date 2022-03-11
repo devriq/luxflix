@@ -1,3 +1,5 @@
+import { Container, Grid, ImageList} from "@mui/material";
+import { wrap } from "module";
 import { useEffect, useState } from "react"
 import MovieShow from "../MovieShow"
 import Movie from './../../Movie';
@@ -6,9 +8,6 @@ import './Listagem.css'
 
 function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; movieList: Movie[]; movieStatus: any[] }): JSX.Element {
     const [activeMovieList, setActiveMovieList] = useState<Movie[]>([]);
-    
-
-    
 
     useEffect(function (): void {
         if (listNumber === '1960-1995') { 
@@ -30,15 +29,16 @@ function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; 
     }, [listNumber]);
 
     return (
-        <div>
-            <section className="movie-list" >
+        <ImageList sx={{
+            display:'flex',
+            flex:1,
+            flexWrap:'wrap',
+            justifyContent:'center'
+        }}>
                 {activeMovieList.map((movie: Movie) => {
                     return <MovieShow key={movie.id} movie={movie} status={movieStatus} />
                 })}
-          
-
-            </section>
-        </div>
+        </ImageList>
     )
 }
 export default Listagem;
