@@ -1,15 +1,14 @@
-import { Container, Grid, ImageList} from "@mui/material";
-import { wrap } from "module";
 import { useEffect, useState } from "react"
 import MovieShow from "../MovieShow"
 import Movie from './../../Movie';
+import homeImage from "../../assets/undraw_horror_movie_luxflix.svg"
 
-import './Listagem.css'
 
 function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; movieList: Movie[]; movieStatus: any[] }): JSX.Element {
     const [activeMovieList, setActiveMovieList] = useState<Movie[]>([]);
 
     useEffect(function (): void {
+        
         if (listNumber === '1960-1995') { 
             let result = movieList.filter((movie: Movie) => parseInt(movie.release_date.substring(0, 4)) <= 1995);
             setActiveMovieList(result);
@@ -28,17 +27,11 @@ function Listagem({ listNumber, movieList, movieStatus }: { listNumber: string; 
         }
     }, [listNumber]);
 
-    return (
-        <ImageList sx={{
-            display:'flex',
-            flex:1,
-            flexWrap:'wrap',
-            justifyContent:'center'
-        }}>
-                {activeMovieList.map((movie: Movie) => {
-                    return <MovieShow key={movie.id} movie={movie} status={movieStatus} />
-                })}
-        </ImageList>
+    return (                
+                <>
+
+                    {listNumber!='' ? (activeMovieList.map((movie: Movie): JSX.Element => <MovieShow key={movie.id} movie={movie} status={movieStatus} />)) : <img src={homeImage}/>}
+                </>
     )
 }
 export default Listagem;

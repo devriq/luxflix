@@ -1,8 +1,0 @@
-footer {
-  background-color: var(--cp-bg-darker);
-  bottom: 0;
-  height: 10vh;
-  width: 100vw;
-  display: grid;
-  place-items: center;
-}
