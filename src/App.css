@@ -1,0 +1,103 @@
+/* Importação da fonte 'Fira Code' do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color:#A8EB12;
+  --accent-color:#00DBFD;
+  --bg-color-dark:#444939;
+  --bg-color-light:#A9AD9B;
+
+  --ff: "Fira Code", sans-serif;
+  --border-radius: 10px;
+  --transition-time: .5s all ease;
+}
+
+#root {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 0 2rem 0;
+  text-align: center;
+  font-family: var(--ff);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+nav{
+  display: flex;
+  background-color: black;
+}
+
+nav ul{
+  text-align: center;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+nav ul li{
+
+  padding:1rem;
+}
+main{
+  margin:3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.logo{
+  padding:1rem;
+}
+
+.card {
+  width: 90vw;
+  max-width: 200px;
+  height:100%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.card img{
+  height: 100%;
+  width: 100%;
+  
+}
+
+.card:hover img{
+  outline: 2px solid var(--primary-color);
+  filter: grayscale(0);
+}
+
+.movie-info{
+  height: 5%;
+  font-size:12px;
+  margin-top: 1rem;
+}
+
+.Yes {
+  filter: grayscale(1)
+}
+
+@media screen and (max-width:700px){
+ nav{
+  flex-direction:column;
+ }
+ nav ul {
+  margin: 0 auto;
+
+ }
+}
