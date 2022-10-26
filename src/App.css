@@ -9,35 +9,50 @@
 
 :root{
   --primary-color:#A8EB12;
-  --accent-color:#00DBFD;
   --bg-color-dark:#444939;
   --bg-color-light:#A9AD9B;
 
   --ff: "Fira Code", sans-serif;
-  --border-radius: 10px;
+  --border-radius: 1rem;
   --transition-time: .5s all ease;
 }
 
 #root {
-  margin: 0 auto;
-  padding: 0 0 2rem 0;
+  font-size: 82.5%;
   text-align: center;
   font-family: var(--ff);
 }
 
-body{
-  max-width: 1200px;
+
+
+a {
+  font-weight: 500;
+  color: whitesmoke;
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--primary-color);
+}
+
+.App {
+  max-width: 144rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
-  width:100%;
+}
+
+.box{
+  display:grid;
+  place-items:center;
 }
 
 nav{
   display: flex;
-  background-color: black;
+  background-color: #111;
+  width:100vw;
+  height:100%;
 }
 
 nav ul{
@@ -45,20 +60,33 @@ nav ul{
   list-style: none;
   display: flex;
   align-items: center;
+  padding: 0 .5rem;
 }
 nav ul li{
-
-  padding:1rem;
+  padding:.5rem 1.5rem;
 }
 main{
-  margin:3rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  flex: 1;
 }
+
+footer{
+  display:grid;
+  place-items: center;
+  padding: 1.5rem;
+  bottom: 0;
+}
+
+
 .logo{
-  padding:1rem;
+  padding:.5rem;
+  max-width: 200px;
+}
+
+.logo img {
+ width:100%;
 }
 
 .card {
@@ -78,8 +106,11 @@ main{
   
 }
 
-.card:hover img{
+.card img:hover{
   outline: 2px solid var(--primary-color);
+}
+
+.Yes:hover{
   filter: grayscale(0);
 }
 
@@ -97,8 +128,7 @@ main{
  nav{
   flex-direction:column;
  }
- nav ul {
+ nav ul, .logo{
   margin: 0 auto;
-
  }
 }

@@ -1,23 +1,28 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
+import LUXFLIX_LOGO from './assets/luxflix-logo.png'
+
+import Footer from "./components/Footer/Footer";
+
+const TMDB_LISTS = {
+  horror: '8175818',
+  awarded: '8222964'
+}
+
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState([]);
+  const [list, setList] = useState(TMDB_LISTS.horror);
 
-  let movieList = [];
 
   useEffect(() => {
-    // const data = fetch(
-    //   "https://api.themoviedb.org/4/list/8175818?page=2&api_key=a79b231633cd9524b54133ecc5c8f1a5&language=en-US&sort_by=release_date.asc`"
-    // )
-    //   .then((response) => response.json())
-    //   .then((response) => setMovies(response.results));
     async function loadData(){
       let dados = [];
+      setIsLoading(true)
       for(let i=1; i<12;i++){
-        let data = await fetch(`https://api.themoviedb.org/4/list/8175818?page=${i}&api_key=a79b231633cd9524b54133ecc5c8f1a5&language=en-US&sort_by=release_date.asc`)
+        await fetch(`https://api.themoviedb.org/4/list/${list}?page=${i}&api_key=a79b231633cd9524b54133ecc5c8f1a5&language=en-US&sort_by=release_date.asc`)
         .then((response) => response.json())
         .then((response) => {
           setStatus(response.comments)
@@ -25,36 +30,35 @@ function App() {
         });
       }
       setMovies(dados)
+      setIsLoading(false)
     }
     loadData();
-    console.log(movies, status)
-  }, []);
+  }, [list]);
 
 
-    
+
   return (
     <div className="App">
       <nav>
         <div className="logo">
-          <h1>Luxflix</h1>
+          <img src={LUXFLIX_LOGO} alt="" className="" />
         </div>
 
           <ul>
-            <li>Horror1</li>
-            <li>Horror2</li>
-            <li>Horror3</li>
-            <li>Horror4</li>
+            <li><a onClick={()=>{setList(TMDB_LISTS.horror)}}>Terror</a></li>
+            <li><a onClick={()=>{setList(TMDB_LISTS.awarded)}}>Premiados</a></li>
           </ul>
       </nav>
 
+      { isLoading ? <main className="box">Carregando</main> : 
+      
       <main>
         {movies.map((movie) => {
           let movieStatusId = `movie:${movie.id}`          
-          
           return (
             <div className="card" key={movie.id}>
               <div className={`movie-poster ${status[movieStatusId]}`}>
-                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}/>
+                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className={`${status[movieStatusId]}`}/>
               </div>
               {/* <div className="movie-info">
                 <strong>{movie.title}</strong>
@@ -62,14 +66,9 @@ function App() {
             </div>
           );
         })}
-      </main>
-
-      <footer>
-        <p className="footer">
-          Copyright &copy; <a href="https://github.com/devriq">DEVriq</a>.{" "}
-          <span id="currentYear"></span>. All rights reserved.
-        </p>
-      </footer>
+      </main>}
+      
+      <Footer/>
     </div>
   );
 }
