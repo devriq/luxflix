@@ -1,9 +1,33 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,600;0,700;0,900;1,400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  /* background-color: #242424; */
 
-  font-synthesis: none;
+
+:root{
+  --primary-color:#A8EB12;
+  --bg-color-dark:#444939;
+  --bg-color-light:#A9AD9B;
+
+  --ff: "Raleway", sans-serif;
+  --border-radius: 1rem;
+  --transition-time: .5s all ease;
 }
+
+*{
+  box-sizing: border-box;
+  font-family: var(--ff);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+a:hover{
+  color: var(--primary-color);
+}
+
+
 
