@@ -3,8 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root{
   --primary-color:#A8EB12;
   --bg-color-dark:#444939;
@@ -17,12 +15,18 @@
 
 *{
   box-sizing: border-box;
-  font-family: var(--ff);
-}
-
-body{
   margin: 0;
   padding: 0;
+  font-family: var(--ff);
+  /*
+  Checar bordas
+  */
+  /* outline: 1px solid red; */
+}
+
+#root{
+  display:flex;
+  flex-direction: column;
 }
 
 a:hover{
